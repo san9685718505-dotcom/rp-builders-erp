@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RP Builders ERP</title>
+</head>
+<body>
+
+<h1>ERP Dashboard</h1>
+
+<p>Total Income: ₹<span id="income">0</span></p>
+<p>Total Orders: <span id="orders">0</span></p>
+
+<button onclick="load()">Refresh</button>
+
+<script>
+function load(){
+fetch("/api/dashboard")
+.then(r=>r.json())
+.then(d=>{
+ income.innerText=d.income;
+ orders.innerText=d.orders;
+})
+}
+load()
+</script>
+
+</body>
+</html>
