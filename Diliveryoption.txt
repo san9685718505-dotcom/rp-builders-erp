@@ -1,0 +1,21 @@
+export default function DeliveryOptions({ setDelivery }) {
+  return (
+    <div className="p-4 bg-gray-900 rounded-lg">
+      <h3 className="text-lg font-bold mb-2">Delivery Options</h3>
+
+      <button
+        onClick={() => setDelivery("FAST")}
+        className="block w-full mb-2 bg-yellow-500 p-2 rounded"
+      >
+        Fast Delivery (4–6 Hours)
+      </button>
+
+      <button
+        onClick={() => setDelivery("SCHEDULED")}
+        className="block w-full bg-green-500 p-2 rounded"
+      >
+        Scheduled Delivery (Next Day)
+      </button>
+    </div>
+  );
+}
